@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/actionbarColor"
+        android:paddingTop="10dp"
+        android:paddingBottom="20dp"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:background="@drawable/logoagree"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_above="@+id/bt_start"
+        android:layout_below="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/subBackground"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="가입을 환영합니다"
+            android:textSize="30dp"
+            android:gravity="center_horizontal" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text= "서비스 약관에 동의 해주세요"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"/>
+        
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="60dp"
+            android:layout_marginLeft="60dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="필수"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <CheckBox
+                    android:id="@+id/check1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:textSize="18dp"
+                    android:enabled="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"> </CheckBox>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="서비스 이용 약관 동의"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toEndOf="@+id/check1"> </TextView>
+
+                <TextView
+                    android:id="@+id/detail1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="자세히보기"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"> </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <CheckBox
+                    android:id="@+id/check2"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:textSize="18dp"
+                    android:enabled="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"> </CheckBox>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="개인정보 수집 및 이용 동의"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toEndOf="@+id/check2"> </TextView>
+
+                <TextView
+                    android:id="@+id/detail2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="자세히보기"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"> </TextView>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <CheckBox
+                    android:id="@+id/check3"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:textSize="18dp"
+                    android:enabled="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"> </CheckBox>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="개인정보 취급 및 위 동의"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toEndOf="@+id/check3"> </TextView>
+
+                <TextView
+                    android:id="@+id/detail3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="자세히보기"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"> </TextView>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <CheckBox
+                    android:id="@+id/check4"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:textSize="18dp"
+                    android:enabled="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"> </CheckBox>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="위치정보 활용 동의"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toEndOf="@+id/check4"> </TextView>
+
+                <TextView
+                    android:id="@+id/detail4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="자세히보기"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"> </TextView>
+            </RelativeLayout>
+
+        </LinearLayout>
+        
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000000"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="20dp"></View>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginLeft="60dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="선택"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <CheckBox
+                    android:id="@+id/sub_check1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:textSize="18dp"
+                    android:enabled="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"> </CheckBox>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="제품 정보 및 이벤트 메일 수신 동의"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toEndOf="@+id/sub_check1"> </TextView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <CheckBox
+                    android:id="@+id/sub_check2"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:textSize="18dp"
+                    android:enabled="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"> </CheckBox>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="제품정보 및 이벤트 문자 수신 동의"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toEndOf="@+id/sub_check2"> </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <CheckBox
+                    android:id="@+id/sub_check3"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:textSize="18dp"
+                    android:enabled="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"> </CheckBox>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="푸쉬알람 마케팅 수신 동의"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toEndOf="@+id/sub_check3"> </TextView>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+   </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/bt_start"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/actionbarColor"
+        android:layout_alignParentBottom="true"
+        android:foreground="?android:selectableItemBackground">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="PARCELLECT 시작하기"
+            android:textSize="28dp"
+            android:gravity="center" />
+    </FrameLayout>
+
+
+</RelativeLayout>

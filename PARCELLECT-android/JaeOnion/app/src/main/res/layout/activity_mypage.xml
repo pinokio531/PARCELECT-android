@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="마이페이지"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:background="@color/actionbarColor"/>
+dp
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp"
+            android:background="@drawable/menu_background">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerInParent="true"
+                android:gravity="center">
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/profile" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="김성민"
+                    android:textSize="23dp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="27dp"
+                android:layout_centerVertical="true"
+                android:background="@color/actionbarColor"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"></LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/bt_token"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:paddingTop="40dp"
+                android:paddingBottom="40dp"
+                android:foreground="?android:selectableItemBackground"
+                android:background="@drawable/menu_background">
+
+                <RelativeLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/mypage_token"
+                        android:layout_toLeftOf="@+id/standard"/>
+
+                    <View
+                        android:id="@+id/standard"
+                        android:layout_width="1dp"
+                        android:layout_height="1dp"
+                        android:layout_centerInParent="true"></View>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="토큰"
+                        android:layout_toRightOf="@+id/standard"
+                        android:textSize="15dp"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+
+                android:id="@+id/bt_record"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:paddingTop="40dp"
+                android:paddingBottom="40dp"
+                android:foreground="?android:selectableItemBackground"
+                android:background="@drawable/menu_background">
+
+                <RelativeLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/mypage_record"
+                        android:layout_toLeftOf="@+id/standard"/>
+
+                    <View
+                        android:id="@+id/standard"
+                        android:layout_width="1dp"
+                        android:layout_height="1dp"
+                        android:layout_centerInParent="true"
+                        tools:ignore="DuplicateIds"></View>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="이용내역"
+                        android:layout_toRightOf="@+id/standard"
+                        android:textSize="15dp"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <FrameLayout
+                android:id="@+id/bt_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:paddingTop="40dp"
+                android:paddingBottom="40dp"
+                android:foreground="?android:selectableItemBackground"
+                android:background="@drawable/menu_background">
+
+                <RelativeLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/mypage_send"
+                        android:layout_toLeftOf="@+id/standard"/>
+
+                    <View
+                        android:id="@+id/standard"
+                        android:layout_width="1dp"
+                        android:layout_height="1dp"
+                        android:layout_centerInParent="true"
+                        tools:ignore="DuplicateIds"></View>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="보낸 배송"
+                        android:layout_toRightOf="@+id/standard"
+                        android:textSize="15dp"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/bt_receive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:paddingTop="40dp"
+                android:paddingBottom="40dp"
+                android:foreground="?android:selectableItemBackground"
+                android:background="@drawable/menu_background">
+
+                <RelativeLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/mypage_receive"
+                        android:layout_toLeftOf="@+id/standard"/>
+
+                    <View
+                        android:id="@+id/standard"
+                        android:layout_width="1dp"
+                        android:layout_height="1dp"
+                        android:layout_centerInParent="true"
+                        tools:ignore="DuplicateIds"></View>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="받을 배송"
+                        android:layout_toRightOf="@+id/standard"
+                        android:textSize="15dp"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <FrameLayout
+                android:id="@+id/bt_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:paddingTop="40dp"
+                android:paddingBottom="40dp"
+                android:foreground="?android:selectableItemBackground"
+                android:background="@drawable/menu_background">
+
+                <RelativeLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/mypage_search"
+                        android:layout_toLeftOf="@+id/standard"/>
+
+                    <View
+                        android:id="@+id/standard"
+                        android:layout_width="1dp"
+                        android:layout_height="1dp"
+                        android:layout_centerInParent="true"
+                        tools:ignore="DuplicateIds"></View>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="업체 찾기"
+                        android:layout_toRightOf="@+id/standard"
+                        android:textSize="15dp"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/bt_qna"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:foreground="?android:selectableItemBackground"
+                android:background="@drawable/menu_background"
+                android:paddingTop="40dp"
+                android:paddingBottom="40dp">
+
+                <RelativeLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/mypage_qna"
+                        android:layout_toLeftOf="@+id/standard"/>
+
+                    <View
+                        android:id="@+id/standard"
+                        android:layout_width="1dp"
+                        android:layout_height="1dp"
+                        android:layout_centerInParent="true"
+                        tools:ignore="DuplicateIds"></View>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="QnA"
+                        android:layout_toRightOf="@+id/standard"
+                        android:textSize="15dp"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <FrameLayout
+                android:id="@+id/bt_faq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:paddingTop="40dp"
+                android:paddingBottom="40dp"
+                android:foreground="?android:selectableItemBackground"
+                android:background="@drawable/menu_background">
+
+                <RelativeLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/mypage_faq"
+                        android:layout_toLeftOf="@+id/standard"/>
+
+                    <View
+                        android:id="@+id/standard"
+                        android:layout_width="1dp"
+                        android:layout_height="1dp"
+                        android:layout_centerInParent="true"
+                        tools:ignore="DuplicateIds"></View>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FAQ"
+                        android:layout_toRightOf="@+id/standard"
+                        android:textSize="15dp"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="?android:selectableItemBackground">
+
+                <RelativeLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+
+                </RelativeLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

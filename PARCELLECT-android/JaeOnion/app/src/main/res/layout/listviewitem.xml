@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="25dp"
+        android:paddingLeft="25dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:background="@drawable/menu_background">
+
+        <ImageView
+            android:id="@+id/brand"
+            android:layout_width="60dp"
+            android:layout_height="10dp"
+            android:background="@drawable/mypage_faq"/>
+
+        <ImageView
+            android:id="@+id/product"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:background="@drawable/mypage_qna"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/productContents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="productContents"
+            android:layout_toRightOf="@+id/product"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:id="@+id/originalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="originalPrice"
+            android:layout_below="@+id/productContents"
+            android:layout_toRightOf="@+id/product"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/salePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="salePrice"
+            android:layout_toRightOf="@+id/product"
+            android:layout_below="@+id/originalPrice"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/saleRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="saleRate"
+            android:layout_toRightOf="@+id/salePrice"
+            android:layout_below="@+id/originalPrice"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"/>
+    </RelativeLayout>
+
+</LinearLayout>
