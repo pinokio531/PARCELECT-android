@@ -25,4 +25,207 @@
 
     </android.support.v7.widget.Toolbar>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.3">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpagerBanner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </android.support.v4.view.ViewPager>
+
+            <LinearLayout
+                android:id="@+id/indicatorLayout"
+                android:orientation="horizontal"
+                android:layout_width="100dp"
+                android:layout_height="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"></LinearLayout>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:background="@color/actionbarColor">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이용방법 알아보기"
+                android:textSize="18dp"
+                android:layout_gravity="center"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="15dp"/>
+        </FrameLayout>
+        
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.6"
+            android:gravity="center"
+            android:orientation="vertical">
+            
+            <RelativeLayout
+                android:id="@+id/background_v"
+                android:layout_width="match_parent"
+                android:layout_height="18dp">
+
+                <ImageView
+                    android:id="@+id/checkLogo"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:background="@drawable/main_check"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:textSize="13dp"
+                    android:layout_toRightOf="@+id/checkLogo"
+                    android:text="PARCELECT 제휴배송업체"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:layout_toRightOf="@+id/subtitle"
+                    android:id="@+id/moreData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="13dp"
+                    android:layout_marginLeft="13dp"
+                    android:textSize="10dp"
+                    android:text="더보기"
+                    android:layout_alignParentBottom="true"/>
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/main_more"
+                    android:layout_toRightOf="@id/moreData"
+                    android:layout_marginLeft="2dp"
+                    android:layout_alignBottom="@+id/subtitle"/>
+
+           </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <FrameLayout
+                    android:id="@+id/bt_left"
+                    android:foreground="?android:selectableItemBackground"
+                    android:layout_width="18dp"
+                    android:layout_height="130dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/main_btleft"
+                    android:layout_marginLeft="30dp"></FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/bt_right"
+                    android:foreground="?android:selectableItemBackground"
+                    android:layout_width="18dp"
+                    android:layout_height="130dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/main_btright"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="30dp"></FrameLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                android:layout_marginTop="25dp">
+
+                <ImageView
+                    android:id="@+id/checkLogo2"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:background="@drawable/main_check"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/subtitle2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:textSize="13dp"
+                    android:layout_toRightOf="@+id/checkLogo2"
+                    android:text="PARCELECT 제휴쇼핑"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:layout_toRightOf="@+id/subtitle2"
+                    android:id="@+id/moreData2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="13dp"
+                    android:layout_marginLeft="13dp"
+                    android:textSize="10dp"
+                    android:text="더보기"
+                    android:layout_alignParentBottom="true"/>
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/main_more"
+                    android:layout_toRightOf="@id/moreData2"
+                    android:layout_marginLeft="2dp"
+                    android:layout_alignBottom="@+id/subtitle2"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <FrameLayout
+                    android:id="@+id/bt_left2"
+                    android:foreground="?android:selectableItemBackground"
+                    android:layout_width="18dp"
+                    android:layout_height="130dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/main_btleft"
+                    android:layout_marginLeft="30dp"></FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/bt_right2"
+                    android:foreground="?android:selectableItemBackground"
+                    android:layout_width="18dp"
+                    android:layout_height="130dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/main_btright"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="30dp"></FrameLayout>
+            </RelativeLayout>
+            
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
 </LinearLayout>

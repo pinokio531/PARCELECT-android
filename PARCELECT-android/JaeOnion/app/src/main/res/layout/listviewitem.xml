@@ -5,63 +5,77 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingRight="25dp"
-        android:paddingLeft="25dp"
-        android:paddingTop="20dp"
-        android:paddingBottom="20dp"
+        android:layout_height="130dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
         android:background="@drawable/menu_background">
 
         <ImageView
             android:id="@+id/brand"
             android:layout_width="60dp"
             android:layout_height="10dp"
-            android:background="@drawable/mypage_faq"/>
+            android:src="@drawable/mypage_faq" />
 
         <ImageView
             android:id="@+id/product"
-            android:layout_width="100dp"
-            android:layout_height="70dp"
-            android:background="@drawable/mypage_qna"
-            android:layout_marginTop="15dp"/>
+            android:layout_width="80dp"
+            android:layout_height="fill_parent"
+            android:src="@drawable/mypage_qna"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="18dp"
+            android:layout_below="@+id/brand"
+            android:layout_marginTop="10dp"/>
 
         <TextView
             android:id="@+id/productContents"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="productContents"
+            android:textSize="11dp"
             android:layout_toRightOf="@+id/product"
-            android:layout_marginLeft="20dp"/>
+            android:layout_above="@+id/originalPrice"
+            android:layout_marginBottom="15dp"/>
 
         <TextView
             android:id="@+id/originalPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="originalPrice"
-            android:layout_below="@+id/productContents"
+            android:textSize="9dp"
             android:layout_toRightOf="@+id/product"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"/>
+            android:layout_above="@+id/pp"/>
 
-        <TextView
-            android:id="@+id/salePrice"
+        <LinearLayout
+            android:id="@+id/pp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="salePrice"
+            android:orientation="horizontal"
             android:layout_toRightOf="@+id/product"
-            android:layout_below="@+id/originalPrice"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"/>
+            android:layout_alignBottom="@+id/product"
+            android:layout_marginBottom="5dp">
 
-        <TextView
-            android:id="@+id/saleRate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="saleRate"
-            android:layout_toRightOf="@+id/salePrice"
-            android:layout_below="@+id/originalPrice"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="10dp"/>
+            <TextView
+                android:id="@+id/salePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="salePrice"
+                android:layout_gravity="bottom"
+                android:textColor="#FF1212"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:layout_gravity="bottom"
+                android:id="@+id/saleRate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="saleRate"
+                android:layout_marginLeft="5dp"
+                android:textSize="10dp"/>
+
+        </LinearLayout>
+
     </RelativeLayout>
 
 </LinearLayout>

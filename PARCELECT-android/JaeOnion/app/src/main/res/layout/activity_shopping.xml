@@ -21,7 +21,9 @@
         android:divider="#ffffff"
         android:dividerHeight="15dp"
         android:layout_marginTop="15dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"></ListView>
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingBottom="20dp"
+        android:scrollbars="none"></ListView>
 
 </LinearLayout>

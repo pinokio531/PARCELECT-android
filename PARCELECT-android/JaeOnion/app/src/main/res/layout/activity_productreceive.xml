@@ -4,14 +4,377 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="상품 받기"
-        android:textSize="20dp"
-        android:gravity="center"
-        android:paddingTop="18dp"
-        android:paddingBottom="18dp"
-        android:background="@color/actionbarColor"/>
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="상품 받기"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:background="@color/actionbarColor"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="배송중인 상품"
+            android:textStyle="bold"
+            android:layout_marginLeft="18dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@drawable/menu_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp">
+s
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/menu_background"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/brand"
+                android:layout_width="60dp"
+                android:layout_height="10dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/shoppingcoupang" />
+
+            <ImageView
+                android:id="@+id/product"
+                android:layout_width="100dp"
+                android:layout_height="70dp"
+                android:src="@drawable/productmacbook"
+                android:layout_marginLeft="15dp"
+                android:layout_below="@+id/brand"
+                android:layout_marginTop="10dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:orientation="vertical"
+                android:layout_below="@+id/brand"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/product"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/productContents"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="productContents"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/receiveDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="originalPrice"
+                    android:textSize="13dp"
+                    android:layout_marginTop="10dp"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp">
+
+            <TextView
+                android:id="@+id/sendstate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="배송상태"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="13dp"/>
+            
+            <View
+                android:layout_width="3dp"
+                android:layout_height="350dp"
+                android:background="@color/actionbarColor"
+                android:layout_alignStart="@+id/sendplace1"
+                android:layout_below="@+id/sendstate"
+                android:layout_centerHorizontal="@+id/sendplace1"
+                android:layout_alignTop="@+id/sendplace1"
+                android:layout_marginLeft="8dp"></View>
+            
+            <ImageView
+                android:id="@+id/sendplace1"
+                android:layout_width="19dp"
+                android:layout_height="18dp"
+                android:background="@drawable/receivenocheck"
+                android:layout_below="@+id/sendstate"
+                android:layout_marginTop="18dp"
+                android:layout_alignStart="@+id/sendstate"
+                android:layout_marginLeft="17dp"/>
+
+            <ImageView
+                android:id="@+id/sendplace2"
+                android:layout_width="19dp"
+                android:layout_height="18dp"
+                android:background="@drawable/receivenocheck"
+                android:layout_below="@+id/sendplace1"
+                android:layout_marginTop="30dp"
+                android:layout_alignStart="@+id/sendstate"
+                android:layout_marginLeft="17dp"/>
+
+            <ImageView
+                android:id="@+id/sendplace3"
+                android:layout_width="19dp"
+                android:layout_height="18dp"
+                android:background="@drawable/receivenocheck"
+                android:layout_below="@+id/sendplace2"
+                android:layout_marginTop="30dp"
+                android:layout_alignStart="@+id/sendstate"
+                android:layout_marginLeft="17dp"/>
+
+            <ImageView
+                android:id="@+id/sendplace4"
+                android:layout_width="19dp"
+                android:layout_height="18dp"
+                android:background="@drawable/receivenocheck"
+                android:layout_below="@+id/sendplace3"
+                android:layout_marginTop="30dp"
+                android:layout_alignStart="@+id/sendstate"
+                android:layout_marginLeft="17dp"/>
+
+            <ImageView
+                android:id="@+id/sendplace5"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@drawable/receivenocheck"
+                android:layout_below="@+id/sendplace4"
+                android:layout_marginTop="30dp"
+                android:layout_alignStart="@+id/sendstate"
+                android:layout_marginLeft="17dp"/>
+
+            <ImageView
+                android:id="@+id/sendplace6"
+                android:layout_width="19dp"
+                android:layout_height="18dp"
+                android:background="@drawable/receivenocheck"
+                android:layout_below="@+id/sendplace5"
+                android:layout_marginTop="30dp"
+                android:layout_alignStart="@+id/sendstate"
+                android:layout_marginLeft="17dp"/>
+
+            <ImageView
+                android:id="@+id/sendplace7"
+                android:layout_width="19dp"
+                android:layout_height="18dp"
+                android:background="@drawable/receiveoncheck"
+                android:layout_below="@+id/sendplace6"
+                android:layout_marginTop="30dp"
+                android:layout_alignStart="@+id/sendstate"
+                android:layout_marginLeft="17dp"/>
+
+            <LinearLayout
+                android:id="@+id/senddate1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/sendstate"
+                android:layout_alignTop="@+id/sendplace1"
+                android:layout_marginLeft="13dp"
+                android:layout_toRightOf="@+id/sendplace1">
+                
+                <TextView
+                    android:id="@+id/date1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:text="날짜 시간 장소"/>
+
+                <TextView
+                    android:id="@+id/state1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:text="상태"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/senddate2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/senddate1"
+                android:layout_alignTop="@id/sendplace2"
+                android:layout_marginLeft="13dp"
+                android:layout_toRightOf="@+id/sendplace1">
+
+                <TextView
+                    android:id="@+id/date2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:text="날짜 시간 장소"/>
+
+                <TextView
+                    android:id="@+id/state2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:text="상태"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/senddate3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/sendstate"
+                android:layout_alignTop="@+id/sendplace3"
+                android:layout_marginLeft="13dp"
+                android:layout_toRightOf="@+id/sendplace1">
+
+                <TextView
+                    android:id="@+id/date3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:text="날짜 시간 장소"/>
+
+                <TextView
+                    android:id="@+id/state3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:text="상태"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/senddate4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/sendstate"
+                android:layout_alignTop="@+id/sendplace4"
+                android:layout_marginLeft="13dp"
+                android:layout_toRightOf="@+id/sendplace1">
+
+                <TextView
+                    android:id="@+id/date4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:text="날짜 시간 장소"/>
+
+                <TextView
+                    android:id="@+id/state4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:text="상태"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/senddate5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/sendstate"
+                android:layout_alignTop="@+id/sendplace5"
+                android:layout_marginLeft="13dp"
+                android:layout_toRightOf="@+id/sendplace1">
+
+                <TextView
+                    android:id="@+id/date5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:text="날짜 시간 장소"/>
+
+                <TextView
+                    android:id="@+id/state5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:text="상태"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/senddate6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/sendstate"
+                android:layout_alignTop="@+id/sendplace6"
+                android:layout_marginLeft="13dp"
+                android:layout_toRightOf="@+id/sendplace1">
+
+                <TextView
+                    android:id="@+id/date6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:text="날짜 시간 장소"/>
+
+                <TextView
+                    android:id="@+id/state6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:text="상태"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/senddate7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/sendstate"
+                android:layout_alignTop="@+id/sendplace7"
+                android:layout_marginLeft="13dp"
+                android:layout_toRightOf="@+id/sendplace1">
+
+                <TextView
+                    android:id="@+id/date7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:text="날짜 시간 장소"/>
+
+                <TextView
+                    android:id="@+id/state7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:text="상태"/>
+
+            </LinearLayout>
+
+
+
+
+       </RelativeLayout>
+
+    </LinearLayout>
 
 </LinearLayout>
