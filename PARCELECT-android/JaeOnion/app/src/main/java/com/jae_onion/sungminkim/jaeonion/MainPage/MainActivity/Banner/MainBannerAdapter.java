@@ -1,12 +1,13 @@
-package com.jae_onion.sungminkim.jaeonion;
+package com.jae_onion.sungminkim.jaeonion.MainPage.MainActivity.Banner;
 
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
+import com.jae_onion.sungminkim.jaeonion.R;
 
 import java.util.ArrayList;
 

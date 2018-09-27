@@ -1,10 +1,12 @@
-package com.jae_onion.sungminkim.jaeonion;
+package com.jae_onion.sungminkim.jaeonion.MainPage.DrawerItem;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.FrameLayout;
+
+import com.jae_onion.sungminkim.jaeonion.R;
 
 public class MypageActivity extends AppCompatActivity {
 

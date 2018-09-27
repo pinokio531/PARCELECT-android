@@ -1,9 +1,11 @@
-package com.jae_onion.sungminkim.jaeonion;
+package com.jae_onion.sungminkim.jaeonion.MainPage.DrawerItem;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
+
+import com.jae_onion.sungminkim.jaeonion.R;
 
 public class ProductReceiveActivity extends AppCompatActivity {
 
@@ -45,6 +47,15 @@ public class ProductReceiveActivity extends AppCompatActivity {
     public void ComponentSetting(){
         TextView tv_contents = (TextView) findViewById(R.id.productContents);
         TextView tv_date = (TextView) findViewById(R.id.receiveDate);
+
+        String macbook = "애플 맥북 프로 터치바 노트북 MPXW2KH/A\n" + "(i5-7267U 33.78cm 13형 Mac OS 8G SSD512G)";
+        String arrive = "9/6(목) 도착예정";
+
+        TextView tv_product = (TextView) findViewById(R.id.productContents);
+        TextView tv_arriveDate = (TextView) findViewById(R.id.receiveDate);
+
+        tv_product.setText(macbook);
+        tv_arriveDate.setText(arrive);
 
         TextView tv_sendDate1 = (TextView) findViewById(R.id.date1);
         TextView tv_sendDate2 = (TextView) findViewById(R.id.date2);

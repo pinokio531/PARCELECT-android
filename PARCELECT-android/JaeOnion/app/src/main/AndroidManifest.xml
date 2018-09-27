@@ -5,11 +5,11 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="PARCELLECT"
+        android:label="PARCELECT"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashActivity">
+        <activity android:name=".InitialActivity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,24 +18,28 @@
         </activity>
 
 
-        <activity android:name=".AgreeActivity"
+        <activity android:name=".InitialActivity.AgreeActivity"
             android:theme="@style/AppTheme"></activity>
-        <activity android:name=".JoinActivity"
+        <activity android:name=".InitialActivity.JoinActivity"
             android:theme="@style/AppTheme"></activity>
-        <activity android:name=".MainActivity"
+        <activity android:name=".MainPage.MainActivity.MainActivity"
             android:theme="@style/AppTheme"></activity>
-        <activity android:name=".MypageActivity"
+        <activity android:name=".MainPage.DrawerItem.MypageActivity"
             android:theme="@style/AppTheme">
         </activity>
 
-        <activity android:name=".ShoppingActivity"
+        <activity android:name=".MainPage.DrawerItem.Shopping.ShoppingActivity"
             android:theme="@style/AppTheme"></activity>
 
-        <activity android:name=".ProductReceiveActivity"
+        <activity android:name=".MainPage.DrawerItem.ProductReceiveActivity"
             android:theme="@style/AppTheme"></activity>
 
-        <activity android:name=".ProductSendActivity"
+        <activity android:name=".MainPage.MainActivity.GridViewAdapter.MoreCompanyActivity"
             android:theme="@style/AppTheme"></activity>
+
+        <activity android:name=".MainPage.DrawerItem.SendProduct.ProductSendFragmentActivity"
+            android:theme="@style/AppTheme"></activity>
+
     </application>
 
 </manifest>

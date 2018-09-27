@@ -24,11 +24,12 @@ dp
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="30dp"
-            android:paddingBottom="30dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
             android:background="@drawable/menu_background">
 
             <LinearLayout
+                android:id="@+id/userInfo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -37,8 +38,8 @@ dp
 
 
                 <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
                     android:layout_marginRight="10dp"
                     android:background="@drawable/profile" />
 
@@ -46,17 +47,40 @@ dp
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="김성민"
-                    android:textSize="23dp" />
+                    android:textSize="25dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_toRightOf="@+id/userInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="13dp"
+                android:layout_alignBottom="@+id/userInfo">
+
+                <ImageView
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:src="@drawable/main_drawer_token"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5400"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="11dp"/>
 
             </LinearLayout>
 
             <ImageView
-                android:layout_width="20dp"
+                android:layout_width="10dp"
                 android:layout_height="20dp"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="27dp"
                 android:layout_centerVertical="true"
-                android:background="@color/actionbarColor"/>
+                android:background="@drawable/mypage_btnext"/>
 
         </RelativeLayout>
 
@@ -95,9 +119,9 @@ dp
                     android:layout_gravity="center">
 
                     <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_marginRight="15dp"
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:layout_marginRight="10dp"
                         android:background="@drawable/mypage_token"
                         android:layout_toLeftOf="@+id/standard"/>
 
@@ -112,7 +136,7 @@ dp
                         android:layout_height="wrap_content"
                         android:text="토큰"
                         android:layout_toRightOf="@+id/standard"
-                        android:textSize="15dp"
+                        android:textSize="13dp"
                         android:layout_centerVertical="true"/>
 
                 </RelativeLayout>
@@ -136,9 +160,9 @@ dp
                     android:layout_gravity="center">
 
                     <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_marginRight="15dp"
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:layout_marginRight="10dp"
                         android:background="@drawable/mypage_record"
                         android:layout_toLeftOf="@+id/standard"/>
 
@@ -154,7 +178,7 @@ dp
                         android:layout_height="wrap_content"
                         android:text="이용내역"
                         android:layout_toRightOf="@+id/standard"
-                        android:textSize="15dp"
+                        android:textSize="13dp"
                         android:layout_centerVertical="true"/>
 
                 </RelativeLayout>
@@ -185,9 +209,9 @@ dp
                     android:layout_gravity="center">
 
                     <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_marginRight="15dp"
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:layout_marginRight="10dp"
                         android:background="@drawable/mypage_send"
                         android:layout_toLeftOf="@+id/standard"/>
 
@@ -203,7 +227,7 @@ dp
                         android:layout_height="wrap_content"
                         android:text="보낸 배송"
                         android:layout_toRightOf="@+id/standard"
-                        android:textSize="15dp"
+                        android:textSize="13dp"
                         android:layout_centerVertical="true"/>
 
                 </RelativeLayout>
@@ -226,9 +250,9 @@ dp
                     android:layout_gravity="center">
 
                     <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_marginRight="15dp"
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:layout_marginRight="10dp"
                         android:background="@drawable/mypage_receive"
                         android:layout_toLeftOf="@+id/standard"/>
 
@@ -244,7 +268,7 @@ dp
                         android:layout_height="wrap_content"
                         android:text="받을 배송"
                         android:layout_toRightOf="@+id/standard"
-                        android:textSize="15dp"
+                        android:textSize="13dp"
                         android:layout_centerVertical="true"/>
 
                 </RelativeLayout>
@@ -274,9 +298,9 @@ dp
                     android:layout_gravity="center">
 
                     <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_marginRight="15dp"
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:layout_marginRight="10dp"
                         android:background="@drawable/mypage_search"
                         android:layout_toLeftOf="@+id/standard"/>
 
@@ -292,7 +316,7 @@ dp
                         android:layout_height="wrap_content"
                         android:text="업체 찾기"
                         android:layout_toRightOf="@+id/standard"
-                        android:textSize="15dp"
+                        android:textSize="13dp"
                         android:layout_centerVertical="true"/>
 
                 </RelativeLayout>
@@ -315,9 +339,9 @@ dp
                     android:layout_gravity="center">
 
                     <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_marginRight="15dp"
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:layout_marginRight="10dp"
                         android:background="@drawable/mypage_qna"
                         android:layout_toLeftOf="@+id/standard"/>
 
@@ -333,7 +357,7 @@ dp
                         android:layout_height="wrap_content"
                         android:text="QnA"
                         android:layout_toRightOf="@+id/standard"
-                        android:textSize="15dp"
+                        android:textSize="13dp"
                         android:layout_centerVertical="true"/>
 
                 </RelativeLayout>
@@ -363,9 +387,9 @@ dp
                     android:layout_gravity="center">
 
                     <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_marginRight="15dp"
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:layout_marginRight="10dp"
                         android:background="@drawable/mypage_faq"
                         android:layout_toLeftOf="@+id/standard"/>
 
@@ -381,7 +405,7 @@ dp
                         android:layout_height="wrap_content"
                         android:text="FAQ"
                         android:layout_toRightOf="@+id/standard"
-                        android:textSize="15dp"
+                        android:textSize="13dp"
                         android:layout_centerVertical="true"/>
 
                 </RelativeLayout>

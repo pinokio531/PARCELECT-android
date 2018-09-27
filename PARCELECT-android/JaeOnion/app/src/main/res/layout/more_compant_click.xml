@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/backgroundView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/company_contents"
+            android:background="@color/transparent"></View>
+
+        <RelativeLayout
+            android:id="@+id/company_contents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bt_useCompany"
+            android:background="#ffffff">
+
+            <TextView
+                android:id="@+id/howMethod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="드론"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="18dp"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/companyImage"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_below="@+id/howMethod"
+                android:layout_marginBottom="25dp"></LinearLayout>
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/bt_useCompany"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/actionbarColor"
+            android:layout_alignParentBottom="true"
+            android:foreground="?android:selectableItemBackground">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="업체 이용하기"
+                android:textSize="28dp"
+                android:gravity="center" />
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

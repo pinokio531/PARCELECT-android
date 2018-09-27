@@ -1,5 +1,7 @@
 package com.jae_onion.sungminkim.jaeonion;
 
+import android.widget.TextView;
+
 public class testtest extends testAbastract {
 
 
@@ -7,8 +9,10 @@ public class testtest extends testAbastract {
         super(hi);
     }
 
+
     @Override
     public void aaa(int i, int j, int ss) {
+
 
     }
 

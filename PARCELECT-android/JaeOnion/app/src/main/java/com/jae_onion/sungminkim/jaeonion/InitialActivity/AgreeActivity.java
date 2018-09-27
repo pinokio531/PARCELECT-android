@@ -1,14 +1,13 @@
-package com.jae_onion.sungminkim.jaeonion;
+package com.jae_onion.sungminkim.jaeonion.InitialActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.FrameLayout;
-import android.widget.TextView;
+import android.widget.Toast;
 
-import org.w3c.dom.Text;
+import com.jae_onion.sungminkim.jaeonion.R;
 
 public class AgreeActivity extends AppCompatActivity {
     @Override
@@ -26,7 +25,8 @@ public class AgreeActivity extends AppCompatActivity {
         bt_start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(AgreeActivity.this, MainActivity.class));
+                Toast.makeText(AgreeActivity.this, "회원가입이 완료되었습니다.", Toast.LENGTH_SHORT).show();
+                JoinActivity.joinActivity.finish();
                 finish();
             }
         });

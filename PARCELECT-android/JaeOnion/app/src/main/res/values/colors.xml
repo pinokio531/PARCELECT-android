@@ -6,4 +6,5 @@
     <color name="backgroundColor">#BDBDBD</color>
     <color name="subBackground">#F6F6F6</color>
     <color name="actionbarColor">#D5D5D5</color>
+    <color name="transparent">#4D000000</color>
 </resources>

@@ -1,4 +1,4 @@
-package com.jae_onion.sungminkim.jaeonion;
+package com.jae_onion.sungminkim.jaeonion.MainPage.DrawerItem.Shopping;
 
 import android.graphics.drawable.Drawable;
 import android.os.Build;
@@ -7,6 +7,8 @@ import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
+
+import com.jae_onion.sungminkim.jaeonion.R;
 
 import java.util.ArrayList;
 

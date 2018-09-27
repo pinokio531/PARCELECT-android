@@ -1,13 +1,15 @@
-package com.jae_onion.sungminkim.jaeonion;
+package com.jae_onion.sungminkim.jaeonion.MainPage.DrawerItem.Shopping;
 
 import android.content.Context;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.jae_onion.sungminkim.jaeonion.MainPage.DrawerItem.Shopping.ShoppingItem;
+import com.jae_onion.sungminkim.jaeonion.R;
 
 import java.util.ArrayList;
 

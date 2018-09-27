@@ -1,7 +1,5 @@
-package com.jae_onion.sungminkim.jaeonion;
+package com.jae_onion.sungminkim.jaeonion.MainPage.MainActivity;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
@@ -14,18 +12,25 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.TypedValue;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.jae_onion.sungminkim.jaeonion.MainPage.DrawerItem.SendProduct.ProductSendFragmentActivity;
+import com.jae_onion.sungminkim.jaeonion.MainPage.MainActivity.Banner.MainBannerAdapter;
+import com.jae_onion.sungminkim.jaeonion.MainPage.MainActivity.Banner.MainBannerItem;
+import com.jae_onion.sungminkim.jaeonion.MainPage.DrawerItem.MypageActivity;
+import com.jae_onion.sungminkim.jaeonion.MainPage.DrawerItem.ProductReceiveActivity;
+import com.jae_onion.sungminkim.jaeonion.MainPage.MainActivity.GridViewAdapter.MoreCompanyActivity;
+import com.jae_onion.sungminkim.jaeonion.R;
+import com.jae_onion.sungminkim.jaeonion.MainPage.DrawerItem.Shopping.ShoppingActivity;
+
 import java.util.ArrayList;
-import java.util.List;
 
 @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
 public class MainActivity extends AppCompatActivity {
@@ -56,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
         pageChangeListener();
         ButtonFunction();
         SettingNavigationDrawer();
+
     }
 
 
@@ -92,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
 
                     case R.id.menu3:
-                        startActivity(new Intent(MainActivity.this, ProductSendActivity.class));
+                        startActivity(new Intent(MainActivity.this, ProductSendFragmentActivity.class));
                         Toast.makeText(MainActivity.this, "선물보내기", Toast.LENGTH_SHORT).show();
                         break;
 
@@ -157,6 +163,15 @@ public class MainActivity extends AppCompatActivity {
         FrameLayout bt_left2 = (FrameLayout) findViewById(R.id.bt_left2);
         FrameLayout bt_right1 = (FrameLayout) findViewById(R.id.bt_right);
         FrameLayout bt_right2 = (FrameLayout) findViewById(R.id.bt_right2);
+        RelativeLayout bt_more = (RelativeLayout) findViewById(R.id.main_moreInfo);
+
+        bt_more.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, MoreCompanyActivity.class));
+
+            }
+        });
 
         bt_left1.setOnClickListener(new View.OnClickListener() {
             @Override
