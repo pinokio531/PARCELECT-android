@@ -10,8 +10,8 @@
         android:text="상품 보내기"
         android:textSize="20dp"
         android:gravity="center"
-        android:paddingTop="18dp"
-        android:paddingBottom="18dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
         android:layout_alignParentTop="true"
         android:background="@color/actionbarColor"/>
 

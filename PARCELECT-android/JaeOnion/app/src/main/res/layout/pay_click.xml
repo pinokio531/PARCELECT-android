@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/backgroundView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/company_contents"
+            android:background="@color/transparent"></View>
+
+        <RelativeLayout
+            android:id="@+id/company_contents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bt_pay"
+            android:background="#ffffff">
+
+            <TextView
+                android:id="@+id/howMethod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="배송정보"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="18dp"
+                android:textSize="15dp"
+                android:textStyle="bold"/>
+
+            <RelativeLayout
+                android:id="@+id/companyInform"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/howMethod"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="@drawable/menu_background">
+
+                <TextView
+                    android:id="@+id/companyName"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="업체이름"
+                    android:layout_alignStart="@+id/company"
+                    android:gravity="center"
+                    android:textSize="14dp"/>
+
+                <ImageView
+                    android:id="@+id/company"
+                    android:layout_width="80dp"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/mypage_qna"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_below="@+id/companyName"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/menu_background"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/productContents"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="productContents"
+                    android:textSize="11dp"
+                    android:layout_toRightOf="@+id/company"
+                    android:layout_alignTop="@+id/company" />
+
+                <TextView
+                    android:id="@+id/deliveryPrice"
+                    android:layout_above="@+id/saleRate"
+                    android:layout_below="@+id/productContents"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="delieveryPrice"
+                    android:textSize="11dp"
+                    android:gravity="center_vertical"
+                    android:layout_toRightOf="@+id/company" />
+
+                <TextView
+                    android:layout_gravity="bottom"
+                    android:id="@+id/saleRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="saleRate"
+                    android:textSize="11dp"
+                    android:layout_toRightOf="@+id/company"
+                    android:layout_alignBottom="@+id/company"
+                    android:layout_marginBottom="5dp"/>
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_below="@+id/companyInform"
+                android:id="@+id/detailOption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="세부옵션"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="18dp"
+                android:textSize="15dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_alignStart="@+id/detailOption"
+                android:layout_below="@+id/detailOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp">
+
+                <LinearLayout
+                    android:id="@+id/deliveryMethod"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/putAdress2"
+                    android:layout_marginTop="13dp">
+
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="match_parent"
+                        android:text="배송형태"
+                        android:textSize="15sp"
+                        android:layout_marginRight="20dp"/>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/card_tv"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/menu_background">
+
+                    <Spinner
+                        android:id="@+id/delivery"
+                        android:layout_width="130dp"
+                        android:layout_height="20dp"
+                        android:entries="@array/second_fragment_deliveryMethod"></Spinner>
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/insurance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/putAdress2"
+                    android:layout_marginTop="13dp">
+
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="match_parent"
+                        android:text="보험여부"
+                        android:textSize="15sp"
+                        android:layout_marginRight="20dp"/>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/card_tv"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/menu_background">
+
+                    <Spinner
+                        android:id="@+id/insuranceExist"
+                        android:layout_width="130dp"
+                        android:layout_height="20dp"
+                        android:entries="@array/second_fragment_insurance"></Spinner>
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/visitDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="13dp">
+
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="match_parent"
+                        android:text="방문희망일"
+                        android:textSize="15sp"
+                        android:layout_marginRight="20dp"/>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/card_tv"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/menu_background">
+
+                        <Spinner
+                            android:id="@+id/dateSpinner"
+                            android:layout_width="130dp"
+                            android:layout_height="20dp"
+                            android:entries="@array/second_fragment_date"></Spinner>
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/request"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="13dp"
+                    android:paddingBottom="15dp">
+
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="match_parent"
+                        android:text="요청사항"
+                        android:textSize="15sp"
+                        android:layout_marginRight="20dp"/>
+
+                    <EditText
+                        android:layout_width="200dp"
+                        android:layout_height="20dp"
+                        android:textSize="10sp"
+                        android:textColor="@color/colorAccent"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:layout_gravity="center_vertical"
+                        android:maxLines="1"
+                        android:inputType="text"
+                        android:background="@drawable/menu_background"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+        <FrameLayout
+            android:id="@+id/bt_pay"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/actionbarColor"
+            android:layout_alignParentBottom="true"
+            android:foreground="?android:selectableItemBackground">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="결제 진행하기"
+                android:textSize="28dp"
+                android:gravity="center" />
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

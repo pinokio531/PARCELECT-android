@@ -1,6 +1,9 @@
 package com.jae_onion.sungminkim.jaeonion.MainPage.DrawerItem.Shopping;
 
 import android.content.Context;
+import android.graphics.Paint;
+import android.text.SpannableStringBuilder;
+import android.text.style.StyleSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -68,6 +71,11 @@ public class ShoppingListAdapter extends BaseAdapter {
         tv_salePrice.setText(shoppingItemList.get(position).salePrice);
         tv_saleRate.setText(shoppingItemList.get(position).saleRate);
 
+
+        //취소선 적용
+        tv_originalPrice.setPaintFlags(tv_originalPrice.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
         return convertView;
     }
+
 }

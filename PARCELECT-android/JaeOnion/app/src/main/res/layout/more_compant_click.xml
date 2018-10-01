@@ -46,7 +46,7 @@
         <FrameLayout
             android:id="@+id/bt_useCompany"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:background="@color/actionbarColor"
             android:layout_alignParentBottom="true"
             android:foreground="?android:selectableItemBackground">

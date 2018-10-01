@@ -1,6 +1,7 @@
 package com.jae_onion.sungminkim.jaeonion.MainPage.MainActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.NavigationView;
@@ -10,6 +11,8 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.TypedValue;
 import android.view.Menu;
@@ -22,11 +25,16 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.jae_onion.sungminkim.jaeonion.MainPage.DrawerItem.SendProduct.ProductSendFragmentActivity;
+import com.jae_onion.sungminkim.jaeonion.MainPage.DrawerItem.SendProduct.StaticString;
 import com.jae_onion.sungminkim.jaeonion.MainPage.MainActivity.Banner.MainBannerAdapter;
 import com.jae_onion.sungminkim.jaeonion.MainPage.MainActivity.Banner.MainBannerItem;
 import com.jae_onion.sungminkim.jaeonion.MainPage.DrawerItem.MypageActivity;
 import com.jae_onion.sungminkim.jaeonion.MainPage.DrawerItem.ProductReceiveActivity;
 import com.jae_onion.sungminkim.jaeonion.MainPage.MainActivity.GridViewAdapter.MoreCompanyActivity;
+import com.jae_onion.sungminkim.jaeonion.MainPage.MainActivity.Recyclerview_First.RecyclerviewItem_First;
+import com.jae_onion.sungminkim.jaeonion.MainPage.MainActivity.Recyclerview_First.Recyclerview_First_Adapter;
+import com.jae_onion.sungminkim.jaeonion.MainPage.MainActivity.Recyclerview_Second.RecyclerviewItem_Second;
+import com.jae_onion.sungminkim.jaeonion.MainPage.MainActivity.Recyclerview_Second.Recyclerview_Second_Adapter;
 import com.jae_onion.sungminkim.jaeonion.R;
 import com.jae_onion.sungminkim.jaeonion.MainPage.DrawerItem.Shopping.ShoppingActivity;
 
@@ -43,12 +51,22 @@ public class MainActivity extends AppCompatActivity {
     private ImageView[] bannerIndicator = null;
     private long pressedtime = 0;
 
+    private RecyclerView recyclerView1, recyclerView2;
+    private RecyclerviewItem_First recyclerviewItem_first;
+    private RecyclerviewItem_Second recyclerviewItem_second;
+    private ArrayList<RecyclerviewItem_First> recyclerviewItem_first_list;
+    private ArrayList<RecyclerviewItem_Second> recyclerviewItem_second_list;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.drawerlayout);
 
         navigationView = (NavigationView) findViewById(R.id.navigation_drawer);
+        recyclerView1 = (RecyclerView) findViewById(R.id.main_recyclerview);
+        recyclerView2 = (RecyclerView) findViewById(R.id.main_recyclerview2);
+        recyclerView1.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        recyclerView2.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             CreateToolBar();
@@ -61,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
         pageChangeListener();
         ButtonFunction();
         SettingNavigationDrawer();
+        setFirstRecyclerView();
 
     }
 
@@ -99,17 +118,14 @@ public class MainActivity extends AppCompatActivity {
 
                     case R.id.menu3:
                         startActivity(new Intent(MainActivity.this, ProductSendFragmentActivity.class));
-                        Toast.makeText(MainActivity.this, "선물보내기", Toast.LENGTH_SHORT).show();
                         break;
 
                     case R.id.menu4:
                         startActivity(new Intent(MainActivity.this, ProductReceiveActivity.class));
-                        Toast.makeText(MainActivity.this, "선물받기", Toast.LENGTH_SHORT).show();
                         break;
 
                     case R.id.menu5:
                         startActivity(new Intent(MainActivity.this, ShoppingActivity.class));
-                        Toast.makeText(MainActivity.this, "쇼핑하기", Toast.LENGTH_SHORT).show();
                         break;
 
                     case R.id.menu6:
@@ -155,6 +171,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         navigationView.setCheckedItem(R.id.menu1);
+        StaticString.MainMoreInformation = false;
+        StaticString.LastPrice = "3,500원";
+        StaticString.CompanyImg = null;
     }
 
     //버튼 리스너
@@ -207,7 +226,7 @@ public class MainActivity extends AppCompatActivity {
         viewPager = (ViewPager) findViewById(R.id.viewpagerBanner);
         MainBannerItem mainBannerItem = new MainBannerItem();
 
-        mainBannerItem.bannerImage = getDrawable(R.drawable.main_banenr);
+        mainBannerItem.bannerImage = getResources().getDrawable(R.drawable.main_banner);
         bannerList.add(mainBannerItem);
         bannerList.add(mainBannerItem);
         bannerList.add(mainBannerItem);
@@ -260,6 +279,44 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    public void setFirstRecyclerView(){
+
+        recyclerviewItem_first_list = new ArrayList<>();
+        recyclerviewItem_second_list = new ArrayList<>();
+
+        RecyclerViewItemSet(getResources().getDrawable(R.drawable.main_cjdaehan), "택배");
+        RecyclerViewItemSet(getResources().getDrawable(R.drawable.main_cjmall), "택배");
+        RecyclerViewItemSet(getResources().getDrawable(R.drawable.main_quick), "퀵서비스");
+
+        RecyclerViewItemset(getResources().getDrawable(R.drawable.main_coupang));
+        RecyclerViewItemset(getResources().getDrawable(R.drawable.main_gmarket));
+        RecyclerViewItemset(getResources().getDrawable(R.drawable.main_cjmall));
+
+        Recyclerview_First_Adapter adapter = new Recyclerview_First_Adapter(recyclerviewItem_first_list);
+        Recyclerview_Second_Adapter adapter2 = new Recyclerview_Second_Adapter(recyclerviewItem_second_list);
+
+        recyclerView1.setAdapter(adapter);
+        recyclerView2.setAdapter(adapter2);
+
+    }
+
+    public void RecyclerViewItemSet(Drawable drawable, String str){
+        recyclerviewItem_first = new RecyclerviewItem_First();
+
+        recyclerviewItem_first.RecyclerImg = drawable;
+        recyclerviewItem_first.ComStr = str;
+
+        recyclerviewItem_first_list.add(recyclerviewItem_first);
+
+    }
+
+    public void RecyclerViewItemset(Drawable drawable){
+        recyclerviewItem_second = new RecyclerviewItem_Second();
+        recyclerviewItem_second.RecyclerImg = drawable;
+        recyclerviewItem_second_list.add(recyclerviewItem_second);
+
+    }
+
     @Override
     public void onBackPressed() {
         if (System.currentTimeMillis() >= pressedtime + 2000) {
@@ -276,7 +333,7 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 
-    /* inflater 연습 -> 이 function은 호출 시 마다 indicator 가 사라지고 다시 나타나는 단점이 있음
+    /* inflater 연습 -> 이 method은 호출 시 마다 indicator 가 사라지고 다시 나타나는 단점이 있음
 
     // bannerIndicator 는 inflate한 view를 1.List<view> 에 담는다.
 

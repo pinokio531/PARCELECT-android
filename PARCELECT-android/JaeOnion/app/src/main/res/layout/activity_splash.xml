@@ -7,21 +7,19 @@
     android:background="@color/backgroundColor"
     android:id="@+id/SplashBackground">
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical"
         android:paddingBottom="50dp"
         android:paddingTop="50dp">
 
         <ImageView
-            android:scaleType="centerInside"
-            android:layout_width="320dp"
-            android:layout_height="90dp"
-            android:background="@drawable/logo" />
+            android:layout_width="290dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/logoagree" />
 
-    </LinearLayout>
+    </FrameLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -36,6 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18dp"
+            android:inputType="textEmailAddress"
             android:hint="아이디"/>
 
         <EditText
@@ -44,7 +43,8 @@
             android:layout_height="wrap_content"
             android:textSize="18dp"
             android:hint="비밀번호"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            android:inputType="textPassword"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -116,7 +116,7 @@
         android:orientation="horizontal"
         android:layout_marginRight="70dp"
         android:layout_marginLeft="70dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40dp"
         android:gravity="center"
         android:weightSum="1"
         android:layout_marginBottom="30dp">

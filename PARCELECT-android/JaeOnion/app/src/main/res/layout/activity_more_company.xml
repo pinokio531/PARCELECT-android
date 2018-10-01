@@ -12,19 +12,22 @@
         android:text="제휴배송 목록"
         android:textSize="20dp"
         android:gravity="center"
-        android:paddingTop="18dp"
-        android:paddingBottom="18dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
         android:background="@color/actionbarColor"/>
 
     <GridView
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:id="@+id/gridSample"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/moreCompant_title"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:verticalSpacing="30dp"
-        android:numColumns="2">
+        android:horizontalSpacing="10dp"
+        android:numColumns="2"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
 
     </GridView>
 

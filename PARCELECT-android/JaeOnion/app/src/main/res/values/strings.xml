@@ -1,3 +1,60 @@
 <resources>
     <string name="app_name">JaeOnion</string>
+
+    <string-array name="third_fragment_period">
+        <item> 일시불 </item>
+        <item> 6개월 </item>
+        <item> 12개월 </item>
+    </string-array>
+
+    <string-array name="third_fragment_selectcard">
+        <item> NH 농협카드</item>
+        <item> KB 국민카드</item>
+        <item> 신한카드 </item>
+        <item> 삼성카드 </item>
+        <item> 롯대카드 </item>
+        <item> 현대카드 </item>
+    </string-array>
+    
+    <string-array name="second_fragment_insurance">
+        <item> 보험적용 </item>
+        <item> 보험미적용 </item>
+    </string-array>
+
+    <string-array name="second_fragment_deliveryMethod">
+        <item> 당일배송(+2000원) </item>
+        <item> 일반배송 </item>
+        <item> 무인택배함(+500원) </item>
+    </string-array>
+
+    <string-array name="first_fragment_phoneNumber">
+        <item>010</item>
+        <item>011</item>
+        <item>070</item>
+    </string-array>
+
+    <string-array name="first_fragment_productWeight">
+        <item>1kg 미만</item>
+        <item>1~5kg</item>
+        <item>5~10kg</item>
+        <item>10kg 초과</item>
+    </string-array>
+
+    <string-array name="first_fragment_productSize">
+        <item>50cm 미만</item>
+        <item>50~100cm</item>
+        <item>100cm 초과</item>
+    </string-array>
+
+    <string-array name="second_fragment_date">
+        <item>2018년 10월 3일</item>
+        <item>2018년 10월 4일</item>
+        <item>2018년 10월 5일</item>
+        <item>2018년 10월 6일</item>
+        <item>2018년 10월 7일</item>
+        <item>2018년 10월 8일</item>
+        <item>2018년 10월 9일</item>
+        <item>2018년 10월 10일</item>
+    </string-array>
+
 </resources>

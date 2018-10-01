@@ -1,21 +1,593 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/sendUserLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp">
+
+            <TextView
+                android:id="@+id/sendUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1. 보내는 분"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/sendUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/sendUser"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent"
+                    android:text="이름"
+                    android:textSize="13sp"
+                    android:gravity="center" />
+
+            <EditText
+                android:id="@+id/sendUserNameEdit"
+                android:layout_width="150dp"
+                android:layout_height="20dp"
+                android:textSize="13sp"
+                android:textColor="@color/colorAccent"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:maxLines="1"
+                android:inputType="text"
+                android:background="@drawable/menu_background"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sendUserPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/sendUserName"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:text="핸드폰번호"
+                android:textSize="13sp"
+                android:gravity="center" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/menu_background">
+
+                <Spinner
+                    android:id="@+id/sendPhone"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:entries="@array/first_fragment_phoneNumber"></Spinner>
+
+            </FrameLayout>
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="1dp"
+                android:background="@color/backgroundColor"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"></View>
+
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:textSize="13sp"
+                android:textColor="@color/colorAccent"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:maxLines="1"
+                android:maxLength="4"
+                android:inputType="number"
+                android:background="@drawable/menu_background"/>
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="1dp"
+                android:background="@color/backgroundColor"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"></View>
+
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:textSize="13sp"
+                android:textColor="@color/colorAccent"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:maxLength="4"
+                android:maxLines="1"
+                android:inputType="number"
+                android:background="@drawable/menu_background"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sendUserAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/sendUserPhone"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:text="우편번호"
+                android:textSize="13sp"
+                android:gravity="center" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:textSize="13sp"
+                android:textColor="@color/colorAccent"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:maxLines="1"
+                android:inputType="text"
+                android:background="@drawable/menu_background"/>
+            
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/menu_background"
+                android:foreground="?android:selectableItemBackground"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp">
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="검색" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sendUserAddress2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/sendUserAddress"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:text="주소"
+                android:textSize="13sp"
+                android:gravity="center" />
+
+            <EditText
+                android:id="@+id/sendUserAddress2Edit"
+                android:layout_width="180dp"
+                android:layout_height="20dp"
+                android:textSize="13sp"
+                android:textColor="@color/colorAccent"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:maxLines="1"
+                android:inputType="text"
+                android:background="@drawable/menu_background"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sendUserAddressDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/sendUserAddress2"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:text="상세주소"
+                android:textSize="13sp"
+                android:gravity="center" />
+
+            <EditText
+                android:layout_width="180dp"
+                android:layout_height="20dp"
+                android:textSize="13sp"
+                android:textColor="@color/colorAccent"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:maxLines="1"
+                android:inputType="text"
+                android:background="@drawable/menu_background"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/receiveUserLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sendUserLayout"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="15dp">
+
+        <TextView
+            android:id="@+id/receiveUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2. 받는 분"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/receiveUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/receiveUser"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:text="이름"
+                android:textSize="13sp"
+                android:gravity="center" />
+            <EditText
+                android:id="@+id/receiveUserNameEdit"
+                android:layout_width="150dp"
+                android:layout_height="20dp"
+                android:textSize="13sp"
+                android:textColor="@color/colorAccent"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:maxLines="1"
+                android:inputType="text"
+                android:background="@drawable/menu_background"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/receiveUserPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/receiveUserName"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:text="핸드폰번호"
+                android:textSize="13sp"
+                android:gravity="center" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/menu_background">
+
+                <Spinner
+                    android:id="@+id/sendPhone2"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:entries="@array/first_fragment_phoneNumber"></Spinner>
+
+            </FrameLayout>
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="1dp"
+                android:background="@color/backgroundColor"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"></View>
+
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:textSize="13sp"
+                android:textColor="@color/colorAccent"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:maxLines="1"
+                android:maxLength="4"
+                android:inputType="number"
+                android:background="@drawable/menu_background"/>
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="1dp"
+                android:background="@color/backgroundColor"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"></View>
+
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:textSize="13sp"
+                android:textColor="@color/colorAccent"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:maxLength="4"
+                android:maxLines="1"
+                android:inputType="number"
+                android:background="@drawable/menu_background"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/receiveUserAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/receiveUserPhone"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:text="우편번호"
+                android:textSize="13sp"
+                android:gravity="center" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:textSize="13sp"
+                android:textColor="@color/colorAccent"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:maxLines="1"
+                android:inputType="text"
+                android:background="@drawable/menu_background"/>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/menu_background"
+                android:foreground="?android:selectableItemBackground"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="검색" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/receiveUserAddress2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/receiveUserAddress"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:text="주소"
+                android:textSize="13sp"
+                android:gravity="center" />
+
+            <EditText
+                android:id="@+id/receiveUserAddress2Edit"
+                android:layout_width="180dp"
+                android:layout_height="20dp"
+                android:textSize="13sp"
+                android:textColor="@color/colorAccent"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:maxLines="1"
+                android:inputType="text"
+                android:background="@drawable/menu_background"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/receiveUserAddressDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/receiveUserAddress2"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:text="상세주소"
+                android:textSize="13sp"
+                android:gravity="center" />
+
+            <EditText
+                android:layout_width="180dp"
+                android:layout_height="20dp"
+                android:textSize="13sp"
+                android:textColor="@color/colorAccent"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:maxLines="1"
+                android:inputType="text"
+                android:background="@drawable/menu_background"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/thirdLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/receiveUserLayout"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="15dp">
+
+        <TextView
+            android:id="@+id/productInformation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3. 상품 정보"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/productName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/productInformation"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:text="상품명"
+                android:textSize="13sp"
+                android:gravity="center" />
+
+            <EditText
+                android:id="@+id/product_name"
+                android:layout_width="180dp"
+                android:layout_height="20dp"
+                android:textSize="13sp"
+                android:textColor="@color/colorAccent"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:maxLines="1"
+                android:inputType="text"
+                android:background="@drawable/menu_background"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/productPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/productName"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:text="상품가격"
+                android:textSize="13sp"
+                android:gravity="center" />
+
+            <EditText
+                android:layout_width="180dp"
+                android:layout_height="20dp"
+                android:textSize="13sp"
+                android:textColor="@color/colorAccent"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:maxLines="1"
+                android:inputType="text"
+                android:background="@drawable/menu_background"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/productWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/productPrice"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:text="상품무게"
+                android:textSize="13sp"
+                android:gravity="center" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/menu_background">
+
+                <Spinner
+                    android:id="@+id/product_weight"
+                    android:layout_width="80dp"
+                    android:layout_height="20dp"
+                    android:entries="@array/first_fragment_productWeight"></Spinner>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/productSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_toRightOf="@+id/productWeight"
+            android:layout_alignBottom="@+id/productWeight"
+            android:layout_marginLeft="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="상품크기"
+                android:textSize="13sp"
+                android:gravity="center" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/menu_background"
+                android:layout_marginLeft="10dp">
+
+                <Spinner
+                    android:id="@+id/product_size"
+                    android:layout_width="85dp"
+                    android:layout_height="20dp"
+                    android:entries="@array/first_fragment_productSize"></Spinner>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@+id/thirdLayout">
 
         <Button
             android:id="@+id/nextButton"
-            android:layout_alignParentBottom="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="다음"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginTop="20dp"/>
 
     </RelativeLayout>
 

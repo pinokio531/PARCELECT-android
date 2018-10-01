@@ -1,9 +1,11 @@
-package com.jae_onion.sungminkim.jaeonion;
+package com.jae_onion.sungminkim.jaeonion.TestDirectory;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
+
+import com.jae_onion.sungminkim.jaeonion.R;
 
 public class vvbb extends AppCompatActivity{
     int a;

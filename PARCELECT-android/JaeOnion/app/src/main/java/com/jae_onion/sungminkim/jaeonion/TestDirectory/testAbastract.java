@@ -1,6 +1,6 @@
-package com.jae_onion.sungminkim.jaeonion;
+package com.jae_onion.sungminkim.jaeonion.TestDirectory;
 
-abstract class testAbastract implements testInterface{
+abstract class testAbastract implements testInterface {
     String hellow;
     public testAbastract(String hi){
         this.hellow = hi;

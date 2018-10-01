@@ -18,7 +18,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.jae_onion.sungminkim.jaeonion.MainPage.DrawerItem.SendProduct.ProductSendFragmentActivity;
+import com.jae_onion.sungminkim.jaeonion.MainPage.DrawerItem.SendProduct.StaticString;
 import com.jae_onion.sungminkim.jaeonion.R;
 
 import java.util.ArrayList;
@@ -85,7 +88,6 @@ public class MoreCompanyActivity extends AppCompatActivity {
 
                 attachedView = true;
 
-                bt_useCompanyListener();
                 removeAttachView();
 
             }
@@ -128,6 +130,8 @@ public class MoreCompanyActivity extends AppCompatActivity {
             imageViews[i].setImageDrawable(getResources().getDrawable(R.drawable.loginfacebook));
             imageViews[i].setBackground(getResources().getDrawable(R.drawable.loginfacebook));
             imageViews[i].setBackgroundResource(R.drawable.loginfacebook);
+            imageViews[i].setBackgroundResource(R.color.actionbarColor);
+            imageViews[i].setBackgroundColor(Color.parseColor("#FFFFFF"));
             imageViews[i].setImageDrawable(getDrawable(R.drawable.loginfacebook));
             */
 
@@ -138,6 +142,8 @@ public class MoreCompanyActivity extends AppCompatActivity {
             srcImg.addView(imageViews[i]);
             ImageClickListener(i);
 
+            bt_useCompanyListener();
+
         }
 
     }
@@ -147,35 +153,42 @@ public class MoreCompanyActivity extends AppCompatActivity {
 
         switch (str){
             case "무인택배함":
+                drawables.clear();
                 drawables.add(getResources().getDrawable(R.drawable.company_normal));
                 drawables.add(getResources().getDrawable(R.drawable.company_normal2));
                 break;
 
             case "카드롭":
+                drawables.clear();
                 drawables.add(getResources().getDrawable(R.drawable.company_cardrop));
                 break;
 
             case "드론택배":
+                drawables.clear();
                 drawables.add(getResources().getDrawable(R.drawable.compan_drone));
                 drawables.add(getResources().getDrawable(R.drawable.company_drone2));
                 break;
 
             case "퀵서비스":
+                drawables.clear();
                 drawables.add(getResources().getDrawable(R.drawable.company_quick));
                 drawables.add(getResources().getDrawable(R.drawable.company_quick2));
                 break;
 
             case "일반택배":
+                drawables.clear();
                 drawables.add(getResources().getDrawable(R.drawable.company_normal));
                 drawables.add(getResources().getDrawable(R.drawable.company_normal2));
                 break;
 
             case "소셜물류":
+                drawables.clear();
                 drawables.add(getResources().getDrawable(R.drawable.company_social));
                 drawables.add(getResources().getDrawable(R.drawable.company_social2));
                 break;
 
             case "당일배송":
+                drawables.clear();
                 drawables.add(getResources().getDrawable(R.drawable.company_normal));
                 drawables.add(getResources().getDrawable(R.drawable.company_normal2));
                 break;
@@ -191,6 +204,8 @@ public class MoreCompanyActivity extends AppCompatActivity {
                     imageViews[k].setBackground(getDrawable(R.drawable.menu_background));
                 }
                 v.setBackgroundColor(getResources().getColor(R.color.actionbarColor));
+                StaticString.DeliveryCompany = " ";
+                StaticString.CompanyImg = ((ImageView) v).getDrawable();
             }
         });
     }
@@ -200,6 +215,13 @@ public class MoreCompanyActivity extends AppCompatActivity {
         bt_useCompany.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(StaticString.CompanyImg == null){
+                    Toast.makeText(MoreCompanyActivity.this, "이용하실 업체를 선택해주세요", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    startActivity(new Intent(MoreCompanyActivity.this, ProductSendFragmentActivity.class));
+                    StaticString.MainMoreInformation = true;
+                }
 
             }
         });
@@ -209,10 +231,13 @@ public class MoreCompanyActivity extends AppCompatActivity {
     public void onBackPressed() {
         if(attachedView == false){
             super.onBackPressed();
+            finish();
         }
 
         else{
-            background.removeView(attachView);
+            if(attachView != null){
+                background.removeView(attachView);
+            }
             attachedView = false;
         }
     }

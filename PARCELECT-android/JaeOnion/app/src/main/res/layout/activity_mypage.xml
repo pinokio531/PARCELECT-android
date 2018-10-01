@@ -17,8 +17,8 @@
             android:text="마이페이지"
             android:textSize="20dp"
             android:gravity="center"
-            android:paddingTop="18dp"
-            android:paddingBottom="18dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
             android:background="@color/actionbarColor"/>
 dp
         <RelativeLayout
@@ -355,7 +355,7 @@ dp
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="QnA"
+                        android:text="Q\u0026A"
                         android:layout_toRightOf="@+id/standard"
                         android:textSize="13dp"
                         android:layout_centerVertical="true"/>
