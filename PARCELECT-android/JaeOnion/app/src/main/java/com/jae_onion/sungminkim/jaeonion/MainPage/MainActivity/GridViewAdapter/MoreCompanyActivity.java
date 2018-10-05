@@ -1,5 +1,6 @@
 package com.jae_onion.sungminkim.jaeonion.MainPage.MainActivity.GridViewAdapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -37,12 +38,14 @@ public class MoreCompanyActivity extends AppCompatActivity {
     private Boolean attachedView = true;
     private ImageView[] imageViews = null;
     private ArrayList<Drawable> drawables = null;
+    public static Activity moreActivity;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_more_company);
         GridList = new ArrayList<>();
+        moreActivity = MoreCompanyActivity.this;
 
         settingGridView();
         GridViewItemSelect();
@@ -219,8 +222,8 @@ public class MoreCompanyActivity extends AppCompatActivity {
                     Toast.makeText(MoreCompanyActivity.this, "이용하실 업체를 선택해주세요", Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    startActivity(new Intent(MoreCompanyActivity.this, ProductSendFragmentActivity.class));
                     StaticString.MainMoreInformation = true;
+                    startActivity(new Intent(MoreCompanyActivity.this, ProductSendFragmentActivity.class));
                 }
 
             }

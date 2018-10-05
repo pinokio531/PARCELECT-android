@@ -171,9 +171,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         navigationView.setCheckedItem(R.id.menu1);
-        StaticString.MainMoreInformation = false;
         StaticString.LastPrice = "3,500원";
         StaticString.CompanyImg = null;
+        StaticString.MainMoreInformation = false;
     }
 
     //버튼 리스너
@@ -328,6 +328,9 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(Intent.ACTION_MAIN);
             intent.addCategory(Intent.CATEGORY_HOME);
             startActivity(intent);
+            if(MoreCompanyActivity.moreActivity != null){
+                MoreCompanyActivity.moreActivity.finish();
+            }
             finish();
         }
     }

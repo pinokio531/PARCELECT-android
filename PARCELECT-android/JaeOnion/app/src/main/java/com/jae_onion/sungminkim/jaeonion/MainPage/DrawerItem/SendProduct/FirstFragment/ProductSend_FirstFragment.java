@@ -80,7 +80,7 @@ public class ProductSend_FirstFragment extends Fragment{
 
                 if(su.length() >= 2 && ru.length() >= 2 && sa.length() >= 2 && ra.length() >= 2 && pn.length() >=2 ){
 
-                    if(StaticString.MainMoreInformation = true){
+                    if(StaticString.MainMoreInformation == true){
                         ProductSendFragmentActivity.FragmentIndex = ProductSendFragmentActivity.Fragment_Third;
                     }
                     else{

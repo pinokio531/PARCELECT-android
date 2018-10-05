@@ -24,6 +24,7 @@ import android.widget.Toast;
 
 import com.jae_onion.sungminkim.jaeonion.MainPage.DrawerItem.SendProduct.ProductSendFragmentActivity;
 import com.jae_onion.sungminkim.jaeonion.MainPage.DrawerItem.SendProduct.StaticString;
+import com.jae_onion.sungminkim.jaeonion.MainPage.MainActivity.GridViewAdapter.MoreCompanyActivity;
 import com.jae_onion.sungminkim.jaeonion.MainPage.MainActivity.MainActivity;
 import com.jae_onion.sungminkim.jaeonion.R;
 
@@ -103,7 +104,7 @@ public class ProductSend_ThirdFragment extends Fragment{
 
     }
 
-    //배열로 하다가 급해서 일단 ischecked 쑤셔박음 -> 수정예정 / radiobutton 하나만 선택되게 기능
+    //for each 문을 활용한 radio 버튼 하나만 누르기
     public void RadioGroupOneSelecet(){
         credit = (RadioButton) view.findViewById(R.id.credit);
         send = (RadioButton) view.findViewById(R.id.sendMoney);
@@ -114,7 +115,22 @@ public class ProductSend_ThirdFragment extends Fragment{
 
         credit.setChecked(true);
 
-        credit.setOnClickListener(new View.OnClickListener() {
+        final RadioButton radioButton[] = new RadioButton[]{credit, send, noCard, token, cellphone};
+
+        for(final RadioButton rb : radioButton){
+            rb.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    for(final RadioButton rb2 : radioButton){
+                        rb2.setChecked(false);
+                    }
+                    rb.setChecked(true);
+                }
+            });
+        }
+
+        //노가다 기법
+        /*credit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 credit.setChecked(true);
@@ -169,7 +185,7 @@ public class ProductSend_ThirdFragment extends Fragment{
                 token.setChecked(false);
                 cellphone.setChecked(true);
             }
-        });
+        });*/
 
     }
 

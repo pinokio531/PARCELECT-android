@@ -300,8 +300,7 @@
                     android:text="안전결재(ISP)"
                     android:layout_weight="0.1"
                     android:scaleX="0.8"
-                    android:scaleY="0.8"
-                    android:checked="true"/>
+                    android:scaleY="0.8" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
